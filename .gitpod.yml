@@ -1,0 +1,9 @@
+image:
+  file: .gitpod.Dockerfile
+tasks:
+  - command: |
+      ocaml -version
+    
+vscode:
+  extensions:
+    - ocamllabs.ocaml-platform
