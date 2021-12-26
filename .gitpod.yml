@@ -1,9 +1,11 @@
 image:
   file: .gitpod.Dockerfile
 tasks:
-  - command: |
-      ocaml -version
-    
+  - name: Build helloworld
+    init: cd helloworld && dune build
+    command: |
+      eval $(opam env)
+
 vscode:
   extensions:
     - ocamllabs.ocaml-platform
