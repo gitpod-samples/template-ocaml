@@ -8,4 +8,9 @@ RUN echo '. /home/gitpod/.opam/opam-init/init.sh > /dev/null 2> /dev/null || tru
 RUN opam init --disable-sandboxing
 RUN eval $(opam env) && opam switch create 4.12.0
 RUN eval $(opam env) && opam update
-RUN eval $(opam env) && ocaml -version
+
+# Install dev toolings
+RUN eval $(opam env) && opam install --yes ocaml-lsp-server ocamlformat ocamlformat-rpc
+
+# Install build system
+RUN eval $(opam env) && opam install --yes dune
