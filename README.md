@@ -2,7 +2,7 @@
 
 This is a [OCaml](https://en.wikipedia.org/wiki/OCaml) template configured for ephemeral development environments on [Gitpod](https://www.gitpod.io/). It provides the development tools recommneded in the offical OCaml documentation: [Up and Running with OCaml](https://ocaml.org/learn/tutorials/up_and_running.html): It uses [Dune](https://dune.readthedocs.io/en/stable/) as the build system, [ocaml-lsp](https://github.com/ocaml/ocaml-lsp) to provide code-completion etc, and [ocamlformat](https://github.com/ocaml-ppx/ocamlformat) to automatically format your code whenever you save files.
 
-To build and run the helloworld program, run the following:
+To build and run the helloworld program, run the following from inside the `helloworld` folder:
 
 ```sh
 dune build

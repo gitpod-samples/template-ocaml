@@ -2,7 +2,8 @@ image:
   file: .gitpod.Dockerfile
 tasks:
   - name: Build helloworld
-    init: cd helloworld && dune build
+    before: cd helloworld
+    init: dune build
     command: |
       eval $(opam env)
 
