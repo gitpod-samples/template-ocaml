@@ -2,6 +2,13 @@
 
 This is a [OCaml](https://en.wikipedia.org/wiki/OCaml) template configured for ephemeral development environments on [Gitpod](https://www.gitpod.io/). It provides the development tools recommneded in the offical OCaml documentation: [Up and Running with OCaml](https://ocaml.org/learn/tutorials/up_and_running.html): It uses [Dune](https://dune.readthedocs.io/en/stable/) as the build system, [ocaml-lsp](https://github.com/ocaml/ocaml-lsp) to provide code-completion etc, and [ocamlformat](https://github.com/ocaml-ppx/ocamlformat) to automatically format your code whenever you save files.
 
+Before you can build and run the helloworld program you need to be in the right directory and have the opam environment configured; in Gitpod this is already done for you.
+
+```sh
+cd helloworld
+eval $(opam env)
+```
+
 To build and run the helloworld program, run the following:
 
 ```sh
