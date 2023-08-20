@@ -1,11 +1,38 @@
 image:
   file: .gitpod.Dockerfile
 tasks:
-  - name: Build helloworld
-    before: cd helloworld
-    init: dune build
+  - name: Build Framework
+    init: |
+      # Disabling sandboxing due to already running in a container
+      # and the way docker works interfering
+      opam init -ay --disable-sandboxing
+
+      eval $(opam env)
+
+      # Update package registry
+      opam update
+
+      # Syntax highlighting, formatting, and language services
+      opam install --yes ocp-indent ocp-index ocamlformat ocamlformat-rpc ocaml-lsp-server
+
+      # SDLC
+      opam install --yes dune odoc utop dot-merlin-reader merlin dune-release
+
+      # IDE integration, command line utils
+      opam install --yes fmt user-setup cmdliner
+
+      # IDE Configuration
+      opam user-setup install
+
+      eval $(opam env)
+
     command: |
       eval $(opam env)
+      # Install all dependencies from opam file
+      opam install --confirm-level=unsafe-yes ./ --deps-only --with-test || true
+
+      # Build the project
+      dune build || true
 
 vscode:
   extensions:
