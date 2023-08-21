@@ -10,7 +10,7 @@ ENV OPAMROOT=/workspace/.opam
 # update: get the latest version
 
 # install: installs the following
-## opam — ocam package manager
+## opam — opam package manager
 ## libev — event loop library used by Lwt
 ## bubblewrap — required for opam
 ## aspcud — used by opam
