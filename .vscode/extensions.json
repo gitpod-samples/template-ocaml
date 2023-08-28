@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "formulahendry.code-runner",
+    "release-candidate.vscode-ocaml-alcotest-test-adapter",
+    "release-candidate.vscode-ocaml-expect-inline"
+  ]
+}

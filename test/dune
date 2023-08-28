@@ -1,2 +1,2 @@
-(executable
+(test
  (name helloworld))

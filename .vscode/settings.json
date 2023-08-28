@@ -1,0 +1,7 @@
+{
+  "ocaml.server.extraEnv": {
+    "OCAMLLSP_SEMANTIC_HIGHLIGHTING": "full"
+  },
+  "editor.defaultFormatter": "ocamllabs.ocaml-platform",
+  "editor.rulers": [80]
+}
